@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Motiva Vision - Central</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 20px; }
+  #status { padding: 8px 12px; background: #eee; border-radius: 6px; margin-bottom: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { border: 1px solid #ccc; padding: 6px; vertical-align: top; text-align: left; }
+  th { background: #f4f4f4; }
+  .SUSPEITA { color: #b36b00; font-weight: bold; }
+  .CONFIRMADO { color: #c00; font-weight: bold; }
+  .REJEITADO, .ENCERRADO { color: #666; }
+  .ok { color: #070; } .bad { color: #c00; }
+  img { height: 56px; }
+  button { margin: 2px; padding: 4px 8px; cursor: pointer; }
+</style>
+</head>
+<body>
+<h1>Motiva Vision - Central Operacional</h1>
+<div id="status">Carregando...</div>
+<p><a href="/export.csv">Exportar CSV</a> | <a href="/export.json">Exportar JSON</a></p>
+<table>
+  <thead><tr>
+    <th>Evento</th><th>Local</th><th>Tipo</th><th>Confiança</th><th>Recomendação</th>
+    <th>Estado</th><th>Evidência</th><th>Comandos</th><th>Ação</th>
+  </tr></thead>
+  <tbody id="rows"></tbody>
+</table>
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"']/g,
+  c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function actions(e) {
+  const b = (a, t) => `<button data-id="${esc(e.event_id)}" data-a="${a}">${t}</button>`;
+  if (e.estado === "SUSPEITA") return b("confirmar", "CONFIRMAR") + b("rejeitar", "REJEITAR");
+  if (e.estado === "CONFIRMADO") return b("encerrar", "ENCERRAR");
+  return "-";
+}
+
+function cmds(e) {
+  return e.comandos.map(c => c.acked_at
+    ? `<div class="ok">${esc(c.acao)} ${esc(c.sent_at)}: confirmado pelo ESP32 (${esc(c.acked_at)})</div>`
+    : `<div class="bad">${esc(c.acao)} ${esc(c.sent_at)}: enviado, aguardando ESP32</div>`).join("");
+}
+
+async function load() {
+  const s = await (await fetch("/api/state")).json();
+  document.getElementById("status").innerHTML =
+    `Broker MQTT: <b class="${s.mqtt ? "ok" : "bad"}">${s.mqtt ? "conectado" : "desconectado"}</b>` +
+    ` | ESP32: <b class="${s.esp.online ? "ok" : "bad"}">${s.esp.online ? "online" : "offline"}</b>` +
+    ` (estado: ${esc(s.esp.estado || "-")}, último contato: ${esc(s.esp.last_seen || "nunca")})`;
+  document.getElementById("rows").innerHTML = s.events.map(e => `<tr>
+    <td>${esc(e.event_id)}<br><small>${esc(e.timestamp)}</small></td>
+    <td>${esc(e.local)}<br><small>${esc(e.camera_id)}</small></td>
+    <td>${esc(e.tipo)}</td>
+    <td>${esc(e.confianca)}</td>
+    <td>${esc(e.recurso)}<br><small>${esc(e.regra)}: ${esc(e.justificativa)}</small></td>
+    <td class="${esc(e.estado)}">${esc(e.estado)}</td>
+    <td>${e.frame_url ? `<a href="${esc(e.frame_url)}" target="_blank"><img src="${esc(e.frame_url)}" onerror="this.style.display='none'"></a>` : ""}
+        <br><small>${esc(e.evidencia.video)} @ ${esc(e.evidencia.segundo)}s</small></td>
+    <td>${cmds(e)}</td>
+    <td>${actions(e)}</td></tr>`).join("");
+}
+
+document.getElementById("rows").addEventListener("click", async ev => {
+  const btn = ev.target.closest("button");
+  if (!btn) return;
+  await fetch(`/api/events/${encodeURIComponent(btn.dataset.id)}/${btn.dataset.a}`, {method: "POST"});
+  load();
+});
+setInterval(load, 2000);
+load();
+</script>
+</body>
+</html>
