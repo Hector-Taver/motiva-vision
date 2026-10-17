@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "author": "Motiva",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -140,
+      "left": -286.9,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -34.45,
+      "left": -374.4,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -5.65,
+      "left": -345.6,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 23.15,
+      "left": -326.4,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 146.4,
+      "left": -363,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "esp:25", "r1:1", "green", [] ],
+    [ "r1:2", "rgb1:R", "green", [] ],
+    [ "esp:26", "r2:1", "green", [] ],
+    [ "r2:2", "rgb1:G", "green", [] ],
+    [ "esp:27", "r3:1", "green", [] ],
+    [ "r3:2", "rgb1:B", "green", [] ],
+    [ "rgb1:COM", "esp:GND.1", "black", [ "h230.5", "v239.6" ] ],
+    [ "bz1:1", "esp:GND.1", "black", [ "h297.6", "v-76.8" ] ],
+    [ "bz1:2", "esp:14", "orange", [ "v19.2", "h38", "v-48", "h192", "v-67.2" ] ]
+  ],
+  "dependencies": {}
+}
