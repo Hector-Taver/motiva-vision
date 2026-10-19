@@ -57,6 +57,8 @@ def process(video_path, show=True, publish=True):
     pub = EventPublisher() if publish else None
     events=[]
     frame_idx = 0
+    max_wfrac = 0.0
+    max_feats = 0
 
     while True:
         ok, frame = cap.read()
@@ -70,9 +72,11 @@ def process(video_path, show=True, publish=True):
 
         frame_feats = {}
         if result.boxes.id is not None:
+            max_feats = max(max_feats, len(frame_feats))
             boxes = result.boxes.xyxy.cpu().numpy().astype(float)
             ids = result.boxes.id.int().cpu().tolist()
             for (x1, y1, x2, y2), tid in zip(boxes, ids):
+                max_wfrac = max(max_wfrac, (x2 - x1) / frame.shape[1])
                 tracks[tid].append((t, (x1 + x2) / 2, (y1 + y2) / 2, x2 - x1, y2 - y1))
                 feats = track_features(tracks[tid], fps)
                 if feats and (x2 - x1) >= MIN_WIDTH_FRAC * frame.shape[1]:
@@ -84,12 +88,14 @@ def process(video_path, show=True, publish=True):
                         label += f" v={feats['speed_now']:.1f} ar={feats['aspect_now']:.2f}"
                     cv2.putText(frame, label, (int(x1), int(y1) - 5),
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
+            max_feats = max(max_feats, len(frame_feats))
 
         ev = mgr.update(t, frame, frame_feats)
         if ev:
             events.append(ev)
             print(json.dumps(ev, ensure_ascii=False, indent=2, default=float))
-            pub.publish(ev)
+            if pub:
+                pub.publish(ev)
 
         if frame_idx % 15 == 0:
             print(f"t={t:6.2f}s  tracked={len(frame_feats)}")
@@ -104,6 +110,8 @@ def process(video_path, show=True, publish=True):
     cv2.destroyAllWindows()
     if pub:
         pub.close()
+    print(f"DEBUG max_width_frac={max_wfrac:.3f} best={mgr.max_tipo} score={mgr.max_score:.2f} "
+      f"max_run={mgr.max_run:.2f}s max_feats={max_feats}")
     if mgr.count == 0:
         print("Resultado: SEM_ACIDENTE")
     return events

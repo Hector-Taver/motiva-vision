@@ -1,0 +1,13 @@
+file,split,expected,source_url,licence,notes
+dev/v01.mp4,dev,SEM_ACIDENTE,https://www.pexels.com/video/cars-on-highway-854671/,Licença Pexels
+dev/v02.mp4,dev,LATERAL,https://www.kaggle.com/datasets/picekl/accident/data,CC BY-NC-SA 4.0
+dev/v03.mp4,dev,SEM_ACIDENTE,https://www.pexels.com/video/traffic-on-the-highway-in-a-city-26804237/,Licença Pexels,
+dev/v04.mp4,dev,TRASEIRA,https://www.kaggle.com/datasets/picekl/accident/data,CC BY-NC-SA 4.0
+dev/v05.mp4,dev,INDETERMINADO,https://www.kaggle.com/datasets/picekl/accident/data,CC BY-NC-SA 4.0,"""O acidente ocorreu em um ponto muito distante da câmera, fazendo com que não seja possível determinar exatamente o tipo de acidente"""
+dev/v06.mp4,dev,CAPOTAMENTO,https://www.kaggle.com/datasets/picekl/accident/data,CC BY-NC-SA 4.0,
+eval/v01.mp4,eval,CAPOTAMENTO,https://www.kaggle.com/datasets/picekl/accident/data,CC BY-NC-SA 4.0
+eval/v02.mp4,eval,SEM_ACIDENTE,https://www.pexels.com/video/traffic-on-highway-14359967/,Licença Pexels
+eval/v03.mp4,eval,SEM_ACIDENTE,https://www.kaggle.com/datasets/picekl/accident/data,CC BY-NC-SA 4.0
+eval/v04.mp4,eval,TRASEIRA,https://www.kaggle.com/datasets/picekl/accident/data,CC BY-NC-SA 4.0
+eval/v05.mp4,eval,LATERAL,https://www.kaggle.com/datasets/picekl/accident/data,CC BY-NC-SA 4.0
+eval/v06.mp4,eval,INDETERMINADO,https://www.kaggle.com/datasets/picekl/accident/data,CC BY-NC-SA 4.0,"""O acidente ocorreu em um ponto muito distânte da câmera e o farol dos carros fez com que não fosse possível ver o que ocorreu no momento do acidente"""

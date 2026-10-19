@@ -18,7 +18,7 @@ ABS_DROP = 0.3        # speed must also fall by at least this much (body widths/
 DEPTH_RATIO = 1.6     # vehicles must have similar box widths to count as "near"
 PERSIST = 0.5         # seconds a signal must hold before an event is created
 TZ = timezone(timedelta(hours=-3))
-
+STRONG = 0.80
 
 def clip01(x):
     return max(0.0, min(1.0, x))
@@ -116,6 +116,11 @@ class EventManager:
         self.active = None
         self.sig_since = None
         self.last_sig = None
+        self.max_score = 0.0
+        self.max_tipo = None
+        self._run_start = None
+        self._run_last = None
+        self.max_run = 0.0
 
     def _make(self, best, t, frame, update=False):
         if self.active is None:
@@ -151,6 +156,15 @@ class EventManager:
         best = max(cands, key=lambda c: c["score"], default=None)
         has_signal = best is not None and best["score"] >= LOW
 
+        # diagnostics (both blocks must exist)
+        if best and best["score"] > self.max_score:
+            self.max_score, self.max_tipo = best["score"], best["tipo"]
+        if best and best["score"] >= THRESH:
+            if self._run_last is None or t - self._run_last > 0.3:
+                self._run_start = t
+            self._run_last = t
+            self.max_run = max(self.max_run, t - self._run_start)
+
         if self.active and t - self.active["last_t"] > COOLDOWN:
             self.active = None  # event ended
 
@@ -163,7 +177,8 @@ class EventManager:
         self.last_sig = t
 
         if self.active is None:
-            if t - self.sig_since < PERSIST:
+            strong = best["score"] >= STRONG
+            if not strong and t - self.sig_since < PERSIST:
                 return None
             return self._make(best, t, frame)
 

@@ -1,0 +1,379 @@
+
+=== dev/v01.mp4 (expected SEM_ACIDENTE) ===
+t=  0.00s  tracked=0
+t=  0.60s  tracked=0
+t=  1.20s  tracked=0
+t=  1.80s  tracked=6
+t=  2.40s  tracked=5
+t=  3.00s  tracked=5
+t=  3.60s  tracked=4
+t=  4.20s  tracked=3
+t=  4.80s  tracked=2
+t=  5.40s  tracked=2
+t=  6.00s  tracked=2
+t=  6.60s  tracked=2
+t=  7.20s  tracked=2
+t=  7.80s  tracked=2
+t=  8.40s  tracked=2
+t=  9.00s  tracked=2
+t=  9.60s  tracked=2
+t= 10.20s  tracked=3
+t= 10.80s  tracked=3
+t= 11.40s  tracked=2
+t= 12.00s  tracked=2
+t= 12.60s  tracked=2
+t= 13.20s  tracked=2
+t= 13.80s  tracked=3
+t= 14.40s  tracked=3
+t= 15.00s  tracked=2
+t= 15.60s  tracked=2
+t= 16.20s  tracked=2
+t= 16.80s  tracked=2
+t= 17.40s  tracked=1
+t= 18.00s  tracked=0
+t= 18.60s  tracked=2
+t= 19.20s  tracked=2
+t= 19.80s  tracked=2
+t= 20.40s  tracked=2
+t= 21.00s  tracked=2
+t= 21.60s  tracked=3
+t= 22.20s  tracked=3
+t= 22.80s  tracked=3
+t= 23.40s  tracked=3
+t= 24.00s  tracked=4
+t= 24.60s  tracked=2
+t= 25.20s  tracked=2
+t= 25.80s  tracked=1
+t= 26.40s  tracked=3
+t= 27.00s  tracked=3
+t= 27.60s  tracked=3
+t= 28.20s  tracked=2
+t= 28.80s  tracked=2
+t= 29.40s  tracked=3
+t= 30.00s  tracked=3
+t= 30.60s  tracked=3
+t= 31.20s  tracked=4
+t= 31.80s  tracked=4
+t= 32.40s  tracked=6
+t= 33.00s  tracked=6
+t= 33.60s  tracked=6
+t= 34.20s  tracked=6
+t= 34.80s  tracked=5
+t= 35.40s  tracked=4
+t= 36.00s  tracked=4
+t= 36.60s  tracked=5
+t= 37.20s  tracked=4
+t= 37.80s  tracked=5
+t= 38.40s  tracked=5
+t= 39.00s  tracked=5
+t= 39.60s  tracked=5
+t= 40.20s  tracked=4
+t= 40.80s  tracked=4
+t= 41.40s  tracked=4
+t= 42.00s  tracked=5
+t= 42.60s  tracked=5
+t= 43.20s  tracked=5
+t= 43.80s  tracked=4
+t= 44.40s  tracked=5
+t= 45.00s  tracked=4
+t= 45.60s  tracked=3
+t= 46.20s  tracked=3
+t= 46.80s  tracked=3
+t= 47.40s  tracked=2
+t= 48.00s  tracked=3
+t= 48.60s  tracked=3
+t= 49.20s  tracked=4
+t= 49.80s  tracked=3
+t= 50.40s  tracked=3
+t= 51.00s  tracked=2
+t= 51.60s  tracked=2
+t= 52.20s  tracked=2
+t= 52.80s  tracked=2
+t= 53.40s  tracked=2
+t= 54.00s  tracked=3
+t= 54.60s  tracked=3
+t= 55.20s  tracked=2
+t= 55.80s  tracked=3
+t= 56.40s  tracked=2
+t= 57.00s  tracked=2
+t= 57.60s  tracked=2
+t= 58.20s  tracked=3
+t= 58.80s  tracked=3
+t= 59.40s  tracked=4
+t= 60.00s  tracked=4
+DEBUG max_width_frac=0.237 best=CAPOTAMENTO score=0.73 max_run=0.08s max_feats=6
+Resultado: SEM_ACIDENTE
+
+=== dev/v02.mp4 (expected LATERAL) ===
+t=  0.00s  tracked=0
+t=  0.50s  tracked=0
+t=  1.01s  tracked=0
+t=  1.51s  tracked=0
+t=  2.02s  tracked=0
+t=  2.52s  tracked=0
+t=  3.03s  tracked=0
+t=  3.53s  tracked=0
+t=  4.04s  tracked=0
+t=  4.54s  tracked=0
+t=  5.04s  tracked=0
+t=  5.55s  tracked=0
+t=  6.05s  tracked=0
+t=  6.56s  tracked=0
+t=  7.06s  tracked=0
+t=  7.57s  tracked=0
+t=  8.07s  tracked=1
+t=  8.58s  tracked=1
+t=  9.08s  tracked=1
+t=  9.59s  tracked=2
+t= 10.09s  tracked=2
+t= 10.59s  tracked=2
+t= 11.10s  tracked=3
+t= 11.60s  tracked=3
+t= 12.11s  tracked=4
+t= 12.61s  tracked=4
+t= 13.12s  tracked=4
+{
+  "event_id": "EVT-20261019-191318-01",
+  "timestamp": "2026-10-19T19:13:34-03:00",
+  "camera_id": "CAM-01",
+  "local": "Rodovia Ficticia km 42",
+  "tipo": "LATERAL",
+  "confianca": 0.81,
+  "indicadores": {
+    "veiculos": 2,
+    "track_ids": [
+      1,
+      81
+    ],
+    "faixa_obstruida": "desconhecido",
+    "parada_brusca": false,
+    "sinais": {
+      "decel": 0.8965874492897324,
+      "angle": 129.7,
+      "closeness": 0.4953141704055486
+    }
+  },
+  "recomendacao": {
+    "recurso": "Solicitar avaliacao da equipe operacional",
+    "regra": "R1",
+    "justificativa": "Evento sem indicadores adicionais de risco"
+  },
+  "estado": "SUSPEITA",
+  "evidencia": {
+    "video": "v02.mp4",
+    "segundo": 13.49,
+    "frame": "evidence/frames/EVT-20261019-191318-01.jpg"
+  },
+  "atualizacao": false
+}
+t= 13.62s  tracked=4
+t= 14.13s  tracked=4
+t= 14.63s  tracked=4
+t= 15.13s  tracked=4
+t= 15.64s  tracked=4
+t= 16.14s  tracked=4
+t= 16.65s  tracked=4
+t= 17.15s  tracked=3
+t= 17.66s  tracked=4
+t= 18.16s  tracked=5
+t= 18.67s  tracked=5
+t= 19.17s  tracked=5
+t= 19.67s  tracked=5
+t= 20.18s  tracked=4
+t= 20.68s  tracked=4
+t= 21.19s  tracked=4
+t= 21.69s  tracked=4
+t= 22.20s  tracked=4
+t= 22.70s  tracked=4
+t= 23.21s  tracked=5
+t= 23.71s  tracked=5
+t= 24.22s  tracked=5
+t= 24.72s  tracked=5
+t= 25.22s  tracked=5
+t= 25.73s  tracked=5
+t= 26.23s  tracked=4
+t= 26.74s  tracked=6
+t= 27.24s  tracked=6
+t= 27.75s  tracked=6
+t= 28.25s  tracked=6
+t= 28.76s  tracked=5
+t= 29.26s  tracked=5
+t= 29.76s  tracked=7
+DEBUG max_width_frac=0.194 best=LATERAL score=0.83 max_run=0.64s max_feats=7
+
+=== dev/v03.mp4 (expected SEM_ACIDENTE) ===
+t=  0.00s  tracked=0
+t=  0.50s  tracked=0
+t=  1.00s  tracked=0
+t=  1.50s  tracked=13
+t=  2.01s  tracked=14
+t=  2.51s  tracked=15
+t=  3.01s  tracked=14
+t=  3.51s  tracked=13
+t=  4.01s  tracked=13
+t=  4.51s  tracked=13
+t=  5.01s  tracked=14
+t=  5.52s  tracked=11
+t=  6.02s  tracked=13
+t=  6.52s  tracked=11
+t=  7.02s  tracked=10
+t=  7.52s  tracked=12
+t=  8.02s  tracked=12
+t=  8.52s  tracked=12
+t=  9.03s  tracked=13
+t=  9.53s  tracked=12
+t= 10.03s  tracked=12
+t= 10.53s  tracked=12
+t= 11.03s  tracked=11
+t= 11.53s  tracked=12
+t= 12.03s  tracked=10
+t= 12.53s  tracked=10
+t= 13.04s  tracked=14
+t= 13.54s  tracked=14
+t= 14.04s  tracked=12
+t= 14.54s  tracked=10
+t= 15.04s  tracked=11
+t= 15.54s  tracked=13
+t= 16.04s  tracked=16
+t= 16.55s  tracked=16
+t= 17.05s  tracked=13
+t= 17.55s  tracked=14
+t= 18.05s  tracked=13
+DEBUG max_width_frac=0.696 best=LATERAL score=0.63 max_run=0.13s max_feats=17
+Resultado: SEM_ACIDENTE
+
+=== dev/v04.mp4 (expected TRASEIRA) ===
+t=  0.00s  tracked=0
+t=  1.00s  tracked=0
+t=  2.00s  tracked=15
+t=  3.00s  tracked=13
+{
+  "event_id": "EVT-20261019-191414-01",
+  "timestamp": "2026-10-19T19:14:17-03:00",
+  "camera_id": "CAM-01",
+  "local": "Rodovia Ficticia km 42",
+  "tipo": "LATERAL",
+  "confianca": 0.89,
+  "indicadores": {
+    "veiculos": 2,
+    "track_ids": [
+      5,
+      9
+    ],
+    "faixa_obstruida": "desconhecido",
+    "parada_brusca": true,
+    "sinais": {
+      "decel": 1.0,
+      "angle": 82.9,
+      "closeness": 0.6967923530731377
+    }
+  },
+  "recomendacao": {
+    "recurso": "Ambulancia (simulado)",
+    "regra": "R2",
+    "justificativa": "Colisao lateral com parada brusca observada"
+  },
+  "estado": "SUSPEITA",
+  "evidencia": {
+    "video": "v04.mp4",
+    "segundo": 3.93,
+    "frame": "evidence/frames/EVT-20261019-191414-01.jpg"
+  },
+  "atualizacao": false
+}
+t=  4.00s  tracked=17
+t=  5.00s  tracked=14
+t=  6.00s  tracked=14
+t=  7.00s  tracked=14
+t=  8.00s  tracked=13
+t=  9.00s  tracked=13
+t= 10.00s  tracked=17
+t= 11.00s  tracked=13
+t= 12.00s  tracked=11
+t= 13.00s  tracked=12
+t= 14.00s  tracked=11
+t= 15.00s  tracked=10
+t= 16.00s  tracked=12
+t= 17.00s  tracked=10
+t= 18.00s  tracked=12
+t= 19.00s  tracked=14
+t= 20.00s  tracked=14
+t= 21.00s  tracked=14
+t= 22.00s  tracked=12
+t= 23.00s  tracked=13
+t= 24.00s  tracked=12
+t= 25.00s  tracked=13
+t= 26.00s  tracked=13
+t= 27.00s  tracked=13
+t= 28.00s  tracked=13
+t= 29.00s  tracked=14
+DEBUG max_width_frac=0.359 best=LATERAL score=0.91 max_run=0.67s max_feats=19
+
+=== dev/v05.mp4 (expected INDETERMINADO) ===
+t=  0.00s  tracked=0
+t=  1.00s  tracked=0
+t=  1.99s  tracked=0
+t=  2.99s  tracked=0
+t=  3.99s  tracked=0
+t=  4.99s  tracked=0
+t=  5.98s  tracked=0
+t=  6.98s  tracked=1
+t=  7.98s  tracked=2
+t=  8.98s  tracked=1
+t=  9.97s  tracked=1
+t= 10.97s  tracked=1
+t= 11.97s  tracked=0
+DEBUG max_width_frac=0.227 best=None score=0.00 max_run=0.00s max_feats=2
+Resultado: SEM_ACIDENTE
+
+=== dev/v06.mp4 (expected CAPOTAMENTO) ===
+t=  0.00s  tracked=0
+t=  0.82s  tracked=0
+t=  1.63s  tracked=3
+t=  2.45s  tracked=3
+t=  3.26s  tracked=3
+t=  4.08s  tracked=3
+t=  4.89s  tracked=3
+t=  5.71s  tracked=4
+{
+  "event_id": "EVT-20261019-191439-01",
+  "timestamp": "2026-10-19T19:14:43-03:00",
+  "camera_id": "CAM-01",
+  "local": "Rodovia Ficticia km 42",
+  "tipo": "CAPOTAMENTO",
+  "confianca": 0.82,
+  "indicadores": {
+    "veiculos": 1,
+    "track_ids": [
+      30
+    ],
+    "faixa_obstruida": "desconhecido",
+    "parada_brusca": true,
+    "sinais": {
+      "shape": 0.6446249894585705,
+      "decel": 1.0
+    }
+  },
+  "recomendacao": {
+    "recurso": "Avaliacao prioritaria + recurso adicional de resgate (simulado)",
+    "regra": "R3",
+    "justificativa": "Capotamento identificado"
+  },
+  "estado": "SUSPEITA",
+  "evidencia": {
+    "video": "v06.mp4",
+    "segundo": 6.41,
+    "frame": "evidence/frames/EVT-20261019-191439-01.jpg"
+  },
+  "atualizacao": false
+}
+t=  6.52s  tracked=5
+t=  7.34s  tracked=4
+t=  8.15s  tracked=4
+t=  8.97s  tracked=4
+t=  9.79s  tracked=3
+t= 10.60s  tracked=3
+DEBUG max_width_frac=0.900 best=CAPOTAMENTO score=0.83 max_run=0.16s max_feats=5
+
+Wrote /Users/hectortaver/Documents/FIAP/edge_computing/cp3/motiva-vision/tests/results_dev.csv
+Counter({'TN': 2, 'TP': 2, 'TIPO_ERRADO': 1, 'SEM_ACIDENTE': 1})
