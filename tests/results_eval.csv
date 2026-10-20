@@ -1,0 +1,7 @@
+file,split,expected,predicted,outcome,confianca,segundo,event_id,frame,n_event_ids,proc_seconds
+eval/v01.mp4,eval,CAPOTAMENTO,SEM_ACIDENTE,FN,,,,,0,25.2
+eval/v02.mp4,eval,SEM_ACIDENTE,SEM_ACIDENTE,TN,,,,,0,14.1
+eval/v03.mp4,eval,SEM_ACIDENTE,SEM_ACIDENTE,TN,,,,,0,15.1
+eval/v04.mp4,eval,TRASEIRA,SEM_ACIDENTE,FN,,,,,0,15.2
+eval/v05.mp4,eval,LATERAL,CAPOTAMENTO,TIPO_ERRADO,0.96,10.05,EVT-20261019-191955-01,evidence/frames/EVT-20261019-191955-01.jpg,1,16.5
+eval/v06.mp4,eval,INDETERMINADO,SEM_ACIDENTE,SEM_ACIDENTE,,,,,0,7.7

@@ -1,0 +1,235 @@
+
+=== eval/v01.mp4 (expected CAPOTAMENTO) ===
+t=  0.00s  tracked=0
+t=  0.65s  tracked=0
+t=  1.29s  tracked=0
+t=  1.94s  tracked=0
+t=  2.59s  tracked=0
+t=  3.23s  tracked=0
+t=  3.88s  tracked=0
+t=  4.53s  tracked=0
+t=  5.17s  tracked=0
+t=  5.82s  tracked=0
+t=  6.47s  tracked=0
+t=  7.11s  tracked=0
+t=  7.76s  tracked=0
+t=  8.41s  tracked=0
+t=  9.05s  tracked=0
+t=  9.70s  tracked=0
+t= 10.34s  tracked=0
+t= 10.99s  tracked=0
+t= 11.64s  tracked=0
+t= 12.28s  tracked=0
+t= 12.93s  tracked=0
+t= 13.58s  tracked=0
+t= 14.22s  tracked=0
+t= 14.87s  tracked=0
+t= 15.52s  tracked=0
+t= 16.16s  tracked=0
+t= 16.81s  tracked=0
+t= 17.46s  tracked=0
+t= 18.10s  tracked=0
+t= 18.75s  tracked=0
+t= 19.40s  tracked=0
+t= 20.04s  tracked=0
+t= 20.69s  tracked=0
+t= 21.34s  tracked=0
+t= 21.98s  tracked=0
+t= 22.63s  tracked=0
+t= 23.28s  tracked=0
+t= 23.92s  tracked=0
+t= 24.57s  tracked=0
+t= 25.22s  tracked=0
+t= 25.86s  tracked=0
+t= 26.51s  tracked=0
+t= 27.16s  tracked=0
+t= 27.80s  tracked=0
+t= 28.45s  tracked=1
+t= 29.09s  tracked=1
+t= 29.74s  tracked=1
+DEBUG max_width_frac=0.321 best=None score=0.00 max_run=0.00s max_feats=1
+Resultado: SEM_ACIDENTE
+
+=== eval/v02.mp4 (expected SEM_ACIDENTE) ===
+t=  0.00s  tracked=0
+t=  0.50s  tracked=0
+t=  1.00s  tracked=0
+t=  1.50s  tracked=0
+t=  2.00s  tracked=1
+t=  2.50s  tracked=0
+t=  3.00s  tracked=1
+t=  3.50s  tracked=1
+t=  4.00s  tracked=0
+t=  4.50s  tracked=0
+t=  5.00s  tracked=1
+t=  5.51s  tracked=2
+t=  6.01s  tracked=0
+t=  6.51s  tracked=3
+t=  7.01s  tracked=3
+t=  7.51s  tracked=3
+t=  8.01s  tracked=2
+t=  8.51s  tracked=4
+t=  9.01s  tracked=4
+t=  9.51s  tracked=3
+t= 10.01s  tracked=4
+t= 10.51s  tracked=3
+t= 11.01s  tracked=6
+t= 11.51s  tracked=6
+t= 12.01s  tracked=7
+DEBUG max_width_frac=0.169 best=None score=0.00 max_run=0.00s max_feats=10
+Resultado: SEM_ACIDENTE
+
+=== eval/v03.mp4 (expected SEM_ACIDENTE) ===
+t=  0.00s  tracked=0
+t=  1.01s  tracked=0
+t=  2.01s  tracked=0
+t=  3.02s  tracked=0
+t=  4.02s  tracked=0
+t=  5.03s  tracked=0
+t=  6.03s  tracked=0
+t=  7.04s  tracked=0
+t=  8.04s  tracked=0
+t=  9.05s  tracked=0
+t= 10.05s  tracked=0
+t= 11.06s  tracked=0
+t= 12.06s  tracked=0
+t= 13.07s  tracked=0
+t= 14.07s  tracked=0
+t= 15.08s  tracked=0
+t= 16.08s  tracked=0
+t= 17.09s  tracked=0
+t= 18.09s  tracked=0
+t= 19.10s  tracked=0
+t= 20.10s  tracked=0
+t= 21.11s  tracked=0
+t= 22.11s  tracked=0
+t= 23.12s  tracked=0
+t= 24.12s  tracked=0
+t= 25.13s  tracked=0
+t= 26.13s  tracked=1
+t= 27.14s  tracked=1
+t= 28.14s  tracked=1
+t= 29.15s  tracked=1
+DEBUG max_width_frac=0.195 best=None score=0.00 max_run=0.00s max_feats=1
+Resultado: SEM_ACIDENTE
+
+=== eval/v04.mp4 (expected TRASEIRA) ===
+t=  0.00s  tracked=0
+t=  1.04s  tracked=0
+t=  2.08s  tracked=1
+t=  3.12s  tracked=0
+t=  4.16s  tracked=0
+t=  5.20s  tracked=1
+t=  6.24s  tracked=0
+t=  7.27s  tracked=0
+t=  8.31s  tracked=0
+t=  9.35s  tracked=1
+t= 10.39s  tracked=1
+t= 11.43s  tracked=1
+t= 12.47s  tracked=1
+t= 13.51s  tracked=1
+t= 14.55s  tracked=1
+t= 15.59s  tracked=2
+t= 16.63s  tracked=3
+t= 17.67s  tracked=3
+t= 18.71s  tracked=3
+t= 19.75s  tracked=3
+t= 20.79s  tracked=3
+t= 21.82s  tracked=3
+t= 22.86s  tracked=3
+t= 23.90s  tracked=3
+t= 24.94s  tracked=3
+t= 25.98s  tracked=3
+t= 27.02s  tracked=2
+t= 28.06s  tracked=2
+t= 29.10s  tracked=2
+DEBUG max_width_frac=0.501 best=None score=0.00 max_run=0.00s max_feats=3
+Resultado: SEM_ACIDENTE
+
+=== eval/v05.mp4 (expected LATERAL) ===
+t=  0.00s  tracked=0
+t=  1.00s  tracked=0
+t=  2.00s  tracked=0
+t=  3.00s  tracked=0
+t=  3.99s  tracked=0
+t=  4.99s  tracked=0
+t=  5.99s  tracked=0
+t=  6.99s  tracked=0
+t=  7.99s  tracked=1
+t=  8.99s  tracked=0
+t=  9.99s  tracked=0
+{
+  "event_id": "EVT-20261019-191955-01",
+  "timestamp": "2026-10-19T19:20:01-03:00",
+  "camera_id": "CAM-01",
+  "local": "Rodovia Ficticia km 42",
+  "tipo": "CAPOTAMENTO",
+  "confianca": 0.96,
+  "indicadores": {
+    "veiculos": 1,
+    "track_ids": [
+      174
+    ],
+    "faixa_obstruida": "desconhecido",
+    "parada_brusca": false,
+    "sinais": {
+      "shape": 1.0,
+      "decel": 0.9216052251832226
+    }
+  },
+  "recomendacao": {
+    "recurso": "Avaliacao prioritaria + recurso adicional de resgate (simulado)",
+    "regra": "R3",
+    "justificativa": "Capotamento identificado"
+  },
+  "estado": "SUSPEITA",
+  "evidencia": {
+    "video": "v05.mp4",
+    "segundo": 10.05,
+    "frame": "evidence/frames/EVT-20261019-191955-01.jpg"
+  },
+  "atualizacao": false
+}
+t= 10.98s  tracked=3
+t= 11.98s  tracked=1
+t= 12.98s  tracked=2
+t= 13.98s  tracked=2
+t= 14.98s  tracked=2
+t= 15.98s  tracked=2
+t= 16.98s  tracked=2
+t= 17.98s  tracked=2
+t= 18.97s  tracked=3
+t= 19.97s  tracked=4
+t= 20.97s  tracked=4
+t= 21.97s  tracked=4
+t= 22.97s  tracked=3
+t= 23.97s  tracked=2
+t= 24.97s  tracked=2
+t= 25.96s  tracked=2
+t= 26.96s  tracked=3
+t= 27.96s  tracked=4
+t= 28.96s  tracked=3
+DEBUG max_width_frac=0.169 best=CAPOTAMENTO score=0.96 max_run=0.00s max_feats=4
+
+=== eval/v06.mp4 (expected INDETERMINADO) ===
+t=  0.00s  tracked=0
+t=  1.94s  tracked=0
+t=  3.87s  tracked=0
+t=  5.81s  tracked=0
+t=  7.75s  tracked=0
+t=  9.68s  tracked=0
+t= 11.62s  tracked=0
+t= 13.56s  tracked=0
+t= 15.49s  tracked=0
+t= 17.43s  tracked=0
+t= 19.37s  tracked=0
+t= 21.30s  tracked=0
+t= 23.24s  tracked=0
+t= 25.18s  tracked=0
+t= 27.11s  tracked=0
+t= 29.05s  tracked=0
+DEBUG max_width_frac=0.000 best=None score=0.00 max_run=0.00s max_feats=0
+Resultado: SEM_ACIDENTE
+
+Wrote /Users/hectortaver/Documents/FIAP/edge_computing/cp3/motiva-vision/tests/results_eval.csv
+Counter({'FN': 2, 'TN': 2, 'TIPO_ERRADO': 1, 'SEM_ACIDENTE': 1})
